@@ -1,0 +1,37 @@
+/* Definició de estills generals per tota la pàgina */
+:root{
+    --tamany-default: 1rem;
+}
+
+/* Estills per el menu principal */
+.menu-principal{ 
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    box-sizing: border-box;
+    padding-right: 50px;
+}
+
+/* Estills per la llista de elements */
+.menu-list{
+    display: flex;
+    position: sticky;
+    top: 0px;
+    gap: 70px;
+    list-style: none;
+}
+
+/* Estills per els elements a que són fills directes de la classe menu-principal */
+.menu-list a{
+    color: white; /* Color del text blanc */
+    text-decoration: none; /* Per defecte no hi hagi underline */
+    font-size: 1.5rem;
+}
+
+/* Modificació per que hagi underline quan el cursor es troba sobre l'element */
+.menu-list a:hover{
+    text-decoration: underline;
+}
