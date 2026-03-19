@@ -19,7 +19,7 @@
     position: absolute;
     top: 25%;
     left: 5%;
-    color: white;
+    color: black;
     font-size: 1.5rem;
     font-family: var(--font-family);
 }
@@ -42,18 +42,25 @@
     display: flex; /* Flex per posar més d'un fill a la línia*/
     flex-wrap: wrap; /* Wrap per permitir el salt de línia*/
     box-sizing: border-box;
+    width: 100%;
     gap: 10px;
     align-items: center;
     justify-content: center;
 }
 
-.item{
-    width: 40%; /* Cada fill ocuparà 40% de la llargura del pare*/
+/* Per que cada imatge ocupi 30% de la llargura del pare */
+.sn_img{
+    flex: 30%;
+}
+
+/* Per que cada text ocupi 70% de la llargura del pare */
+.sn_txt{
+    flex: 60%;
 }
 
 .item img{
-    height: 300px;
-    width: 400px;
+    width: 100%;
+    height: auto;
     border-radius: var(--contorns-arrodonits); /* Per fer els contorns arrodonits */
 }
 
@@ -91,6 +98,7 @@
     box-sizing: border-box;
 }
 
+/* Definició dels elements per fer el flex */
 .capcalera_carta{
     grid-area: item1;
     border: 1px solid black;
@@ -109,12 +117,10 @@
 
 .img1{
     grid-area: item4;
-
 }
 
 .img2{
     grid-area: item5;
-
 }
 
 .menu2{
@@ -124,26 +130,59 @@
 
 .contingut2{
     grid-area: item7;
-    width: 100%;
-    box-sizing: border-box;
 }
 
 .img3{
     grid-area: item8;
-
 }
 
 .img4{
     grid-area: item9;
-
 }
 
-/* Estilos para aos containers das imagens no grid */
-
+/* Estills per la div img_carta per fer el efecte amb padding i border-radius */
+.img_carta{
+    position: relative;
+    padding: 5px;
+    border: 0.5px solid rgb(186, 186, 186);
+    border-radius: 5px; /* Per fer els contorns arrodonits */
+}
 
 /* Estilos para as imagens dentro do grid para que não sobresaian */
 .img1 img, .img2 img, .img3 img, .img4 img{
     width: 100%;
     height: 100%;
-    border-radius: var(--contorns-arrodonits); /* Per fer els contorns arrodonits */
+    object-fit: cover;
+    display: block;
+}
+
+/* Estills per el text dins de la imatge */
+.nom_plat{
+    width: 100%; 
+    height: 20%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    font-size: 1.5rem;
+    font-family: var(--font-family);
+    opacity: 0.7;
+}
+
+/* Efecte per que el text dins de la imatge no surta per fora de la imatge */
+.img_wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Estills per el menu1 i menu2 */
+.menu{
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
