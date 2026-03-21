@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/styleMenuNavegacio.css">
+    <link rel="stylesheet" href="style/styleHeaderFooter.css">
     <link rel="stylesheet" href="style/index.css">
     <title>Pàgina Principal</title>
     <link rel="icon" type="image/x-icon" href="/img/favicon.svg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 </head>
 <body>
-    <header>
     <!-- contenidor per el menu navegació -->
+    <header>
         <nav class="menu-principal">
             <ul class="menu-list">
-                <li><a href="">Nosaltres</a></li>
-                <li><a href="">Carta</a></li>
-                <li><a href="">Galeria</a></li>
+                <li><a href="#sobreNosaltres">Nosaltres</a></li>
+                <li><a href="#carta">Carta</a></li>
+                <li><a href="#galeria_imatges">Galeria</a></li>
             </ul>
         </nav>
     </header>
@@ -30,7 +31,7 @@
     </div>
 
     <!-- contenidor per "Sobre nosaltres" -->
-    <div class="sobreNosaltres">
+    <div class="sobreNosaltres" id="sobreNosaltres">
         <h1>Sobre Nosaltres</h1>
         <div class="contenidorSobreNosaltres">
             <div class="item sn_img">
@@ -61,7 +62,7 @@
     </div>
 
     <!-- contenidor per Carta -->
-     <div class="carta">
+     <div class="carta" id="carta">
         <h1>Carta</h1>
         <div class="carta_container">
             <div class="capcalera_carta"><h2>Menu</h2></div>
@@ -111,11 +112,69 @@
                     <div class="nom_plat">Porc amb ruca</div>
                 </div>
             </div>
-
         </div>
      </div>
 
+    <!-- contenidor per la galeria d'imatges -->
+    <div class="galeria_imatges" id="galeria_imatges">
+        <h1>Galeria d'imatges</h1>
+        <div class="galeria">
+            <div class="galeria_img"><img src="img/galeria1.jpg" alt="Plat de frankfurt"></div>
+            <div class="galeria_img"><img src="img/galeria2.jpg" alt="Plat de peix"></div>
+            <div class="galeria_img"><img src="img/galeria3.jpg" alt="Plat d'entrecot"></div>
+            <div class="galeria_img"><img src="img/galeria4.jpg" alt="Plat de wrap"></div>
+            <div class="galeria_img"><img src="img/galeria5.jpg" alt="Arroz amb verdures"></div>
+            <div class="galeria_img"><img src="img/galeria6.jpg" alt="Pasta amb tomaquet"></div>
+            <div class="galeria_img"><img src="img/galeria7.jpg" alt="Peix amb cigrons"></div>
+            <div class="galeria_img"><img src="img/galeria8.jpg" alt="Pastís de pastanaga"></div>
+        </div>
+    </div>
+    
+    <!-- contenidor per el formulari -->
+    <div class="formulari" id="formulari">
+        <h1>Reserva</h1>
+        <div class="form">
+            <div class="item_form itf1">
+                <label for="nom">Nom:</label>
+                <input type="text" id="nom" name="usuari_nom">
+            </div>
+
+            <div class="item_form itf2">
+                <label for="num_persones">Número de persones:</label>
+                <input type="number" id="num_persones" name="num_persones">
+            </div>
+
+            <div class="item_form itf3">
+                <label for="data">Data:</label>
+                <input type="date" id="data" name="data">
+            </div>
+
+            <div class="item_form itf4">
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora">
+            </div>
+
+            <div class="item_form itf5">
+                <label for="descripcio">Descripció</label>
+                <textarea name="descripcio" id="descripcio"></textarea>
+            </div>
+        </div>
+        <button class="btn">Reservar</button>
+    </div>
      
+    <!-- contenidor per el menu footer -->
+    <footer>
+        <div>
+            <span class="material-symbols-outlined" style="color: white;">mail</span>
+            <p>example@gmail.com</p>
+        </div>
+        <div>
+            <span class="material-symbols-outlined" style="color: white;">call</span>
+            <p>+34 645732176</p>
+        </div>
+        <img src="img/favicon.svg" alt="Logo, imatge de forquilla i ganivet">
+
+    </footer>
 
 </body>
 </html>

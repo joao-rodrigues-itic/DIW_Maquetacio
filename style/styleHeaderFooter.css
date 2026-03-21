@@ -1,0 +1,71 @@
+:root{
+    --color-text: white;
+}
+
+/* Definició de estills generals per tota la pàgina */
+html{
+    font-size: 15px;
+}
+
+/* Definifió d'estills per que el menu sigui sticky */
+header{
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+/* Estills per el menu principal */
+.menu-principal{
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: end; /* Per que els items estem a la dreta */
+    box-sizing: border-box;
+    padding-right: 25px;
+}
+
+/* Estills per la llista de elements */
+.menu-list{
+    display: flex;
+    gap: 70px;
+    list-style: none;
+}
+
+/* Estills per els elements a que són fills directes de la classe menu-principal */
+.menu-list a{
+    color: var(--color-text); /* Color del text blanc */
+    text-decoration: none; /* Per defecte no hi hagi underline */
+    font-size: 1.5rem;
+}
+
+/* Modificació per que hagi underline quan el cursor es troba sobre l'element */
+.menu-list a:hover{
+    text-decoration: underline;
+}
+
+/* Estills per el contenidor footer */
+footer{
+    margin-top: 30px;
+    display: flex;
+    background-color: black;
+}
+
+/* El div conté un logo i el text */
+footer > div{
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+
+footer  p{
+    color: var(--color-text);
+}
+
+/* Per que l'imatge es quedi a la dreta */
+footer > img {
+    width: 40px;
+    height: auto;
+    margin-left: auto;
+    margin-right: 20px;
+}
