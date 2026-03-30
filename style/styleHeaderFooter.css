@@ -69,3 +69,34 @@ footer > img {
     margin-left: auto;
     margin-right: 20px;
 }
+
+@media (max-width: 768px){
+    .menu-principal{
+        width: 100%;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Per que els items estem al mig */
+        box-sizing: border-box;
+        padding-right: 25px;
+    }
+
+    footer > img {
+        display: none;
+    }
+
+    footer > div{
+    display: flex;
+    align-items: center;
+    margin-left: 150px;
+    }
+}
+
+@media (max-width: 576px){
+    .menu-list{
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+        list-style: none;
+    }
+}
