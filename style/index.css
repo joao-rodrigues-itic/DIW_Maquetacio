@@ -25,7 +25,8 @@ html{
     position: absolute;
     top: 25%;
     left: 5%;
-    color: black;
+    background-color: black;
+    color: rgb(255, 255, 255);
     font-size: 1.5rem;
     font-family: var(--font-family);
 }
@@ -218,6 +219,7 @@ html{
     padding: 5px;
     border: 1px solid rgb(186, 186, 186);
     border-radius: 7px;
+    overflow: hidden; /* Per amagar el que sobrepassi quan la imatge es fa més gran */
 }
 
 /* Elements 1, 4, 5 i 8 més foscs */
@@ -241,12 +243,20 @@ html{
 /* Quan el mouse esté a l'imatge, es veu més fosc i el contorn es queda blau */
 .galeria_img:hover{
     border: 1px solid rgb(0, 251, 255);
-    filter: brightness(0.6);
+    /*filter: brightness(0.6);*/
 }
 
 .galeria_img img{
     width: 100%;
     height: 200px;
+    transition: 3s; /* Transiction per tornar a la posició original quan el mouse fiqui fora de la imatge */
+}
+
+/* Estills per fer els efectes quan el mouse es fiqui dins de la imatge */
+.galeria_img img:hover{
+    transform: scale(2) rotate(45deg);
+    filter: grayscale(1);
+    transition: 3s;
 }
 
 
