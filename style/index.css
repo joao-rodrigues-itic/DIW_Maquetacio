@@ -25,10 +25,23 @@ html{
     position: absolute;
     top: 25%;
     left: 5%;
-    background-color: black;
-    color: rgb(255, 255, 255);
+    color: white;
     font-size: 1.5rem;
     font-family: var(--font-family);
+    opacity: 1;
+    animation-name: animacio_capcalera;
+    animation-duration: 4s;
+}
+
+@keyframes animacio_capcalera {
+    from {
+        top: 300px;
+        color: orange;
+        opacity: 0;
+    }
+    to {
+        top: 25%;
+    }
 }
 
 /* Definició d'estills per la part sobre nosaltres */
