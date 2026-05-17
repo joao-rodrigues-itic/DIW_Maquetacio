@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/styleHeaderFooter.css">
-    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/style.css">
     <title>Pàgina Principal</title>
     <link rel="icon" type="image/x-icon" href="/img/favicon.svg">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
@@ -12,7 +12,7 @@
 <body>
     <!-- contenidor per el menu navegació -->
     <header>
-        <nav class="menu-principal">
+        <nav class="menu-principal" id="navbar">
             <ul class="menu-list">
                 <li><a href="#sobreNosaltres">Nosaltres</a></li>
                 <li><a href="#carta">Carta</a></li>
@@ -34,10 +34,10 @@
     <div class="sobreNosaltres" id="sobreNosaltres">
         <h1>Sobre Nosaltres</h1>
         <div class="contenidorSobreNosaltres">
-            <div class="item sn_img">
+            <div class="item sn_img i1">
                 <img src="img/sobreNos1.jpg" alt="Imagte d'un chef de cuina">
             </div>
-            <div class="item sn_txt">
+            <div class="item sn_txt i2">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt faucibus cursus.
                     Integer lobortis massa nunc, eu suscipit magna pellentesque id. Curabitur ex mauris,
                     faucibus ac vehicula et, tempus ac lacus. Cras ut tempor neque. Nunc rhoncus efficitur sapien,
@@ -46,7 +46,7 @@
                     ultricies scelerisque mauris. Donec magna diam, tempor a leo a, posuere scelerisque arcu.
                     Proin leo mi, efficitur eu iaculis sed, mollis congue eros.</p>
             </div>
-            <div class="item sn_txt">
+            <div class="item sn_txt i3">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt faucibus cursus.
                     Integer lobortis massa nunc, eu suscipit magna pellentesque id. Curabitur ex mauris,
                     faucibus ac vehicula et, tempus ac lacus. Cras ut tempor neque. Nunc rhoncus efficitur sapien,
@@ -55,7 +55,7 @@
                     ultricies scelerisque mauris. Donec magna diam, tempor a leo a, posuere scelerisque arcu.
                     Proin leo mi, efficitur eu iaculis sed, mollis congue eros.</p>
             </div>
-            <div class="item sn_img">
+            <div class="item sn_img i4">
                 <img src="img/sobreNos2.jpg" alt="Imatge d'un cambrer">
             </div>
         </div>
@@ -160,7 +160,29 @@
             </div>
         </div>
         <button class="btn-form">Reservar</button>
-        <button class="btn">Reservar</button>
+        <a href="#formulari" class="btn">Reservar</a>
+    </div>
+
+    <!-- contenidor per el video -->
+    <div class="video">
+        <h1>Videos del restaurant</h1>
+        
+        <div class="contenidor_video">
+            <div class="overlay">
+                <div class="menu_video">
+                    <button onclick="playVideo()"><span class="material-symbols-outlined" style="color: white;">play_circle</span></button>
+                    <button onclick="pauseVideo()"><span class="material-symbols-outlined" style="color: white;">pause_circle</span></button>
+                    <button onclick="unmute()"><span class="material-symbols-outlined" style="color: white;">volume_up</span></button>
+                    <button onclick="mute()"><span class="material-symbols-outlined" style="color: white;">volume_off</span></button>
+                </div>
+            
+            <video width="640" height="480" id="video">
+                <source src="video/video.mp4" type="video/mp4">
+                <source src="video/video.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
+            </div>
+        </div>
     </div>
      
     <!-- contenidor per el menu footer -->
@@ -177,5 +199,57 @@
 
     </footer>
 
+    <script>
+
+        let video = document.getElementById("video");
+        let videoIniciado = false;
+
+        window.onscroll = function() {scrollFunction()};
+    
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                document.getElementById("navbar").style.padding = "10px 25px";
+            } else {
+                document.getElementById("navbar").style.padding = "70px 25px";
+            }
+
+            //3100px
+            /*if(window.scrollY > 3100 || window.scrollY > 3100){
+                video.muted = true;
+                playVideo();
+            }
+
+            let scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
+            console.log("Posição atual do scroll: " + scrollPos);*/
+
+            let posicaoVideo = video.getBoundingClientRect();
+
+            if (posicaoVideo.top < window.innerHeight && !videoIniciado) {
+                video.muted = true;
+                playVideo();
+                
+            }
+        }
+
+        
+
+        function playVideo(){
+            video.play();
+        }
+        
+        function pauseVideo(){
+            video.pause();
+        }
+
+        function unmute(){
+            video.muted = false;
+        }
+
+        function mute(){
+            video.muted = true;
+        }
+
+    </script>
 </body>
 </html>

@@ -23,6 +23,7 @@ header{
     justify-content: end; /* Per que els items estem a la dreta */
     box-sizing: border-box;
     padding-right: 25px;
+    transition: 0.2s;
 }
 
 /* Estills per la llista de elements */
@@ -30,6 +31,8 @@ header{
     display: flex;
     gap: 70px;
     list-style: none;
+    animation-name: animacio_menu;
+    animation-duration: 2s;
 }
 
 /* Estills per els elements a que són fills directes de la classe menu-principal */
@@ -42,6 +45,31 @@ header{
 /* Modificació per que hagi underline quan el cursor es troba sobre l'element */
 .menu-list a:hover{
     text-decoration: underline;
+    color: orange;
+}
+
+.menu-list > li:hover{
+    transform: scale(1.5);
+    transition: 0.5s;
+    animation-name: animacio_menu;
+}
+
+@keyframes animacio_menu {
+    0% {
+        transform: translateX(-250%);
+    }
+    25% {
+        transform: translateX(-188%);
+    }
+    50%{
+        transform: translateX(-126%);
+    }
+    75%{
+        transform: translateX(-64%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
 }
 
 /* Estills per el contenidor footer */
