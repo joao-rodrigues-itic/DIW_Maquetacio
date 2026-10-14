@@ -71,7 +71,6 @@ Els fitxers s'han validat amb les eines oficials del W3C:
 
 ## 👤 Autor
 
-**João Rodrigues**: [@joao-rodrigues-itic](https://github.com/joao-rodrigues-itic)
-                                            (https://github.com/joaorodskt)
+**João Rodrigues**: [@joao-rodrigues-itic](https://github.com/joao-rodrigues-itic)(https://github.com/joaorodskt)
 
 Activitat realitzada per a l'assignatura de Disseny d'Interfícies Web.
