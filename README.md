@@ -4,7 +4,6 @@ Repositori per a l'activitat de maquetació de l'assignatura de **Disseny d'Inte
 
 El projecte consisteix en la pàgina web d'un restaurant fictici, **Restaurant Els Coberts**, maquetada amb HTML5 i CSS3 sense cap llibreria ni framework.
 
-![Captura de la pàgina principal](img/portada.jpg)
 
 ## 🎯 Objectius
 
